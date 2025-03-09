@@ -7,7 +7,7 @@ import React from "react";
 const Page = () => {
   const [tab, setTab] = React.useState("30 days");
   return (
-    <div className=" w-full p-8 z-20">
+    <div className=" w-full px-3 py-8 sm:p-8 z-20">
       {/* Header */}
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8">
         <div className="text-center sm:text-start mb-4 md:mb-0">
@@ -131,7 +131,7 @@ const Page = () => {
                 </button>
               </div>{" "}
             </div>
-            <div className="flex flex-col  items-center gap-6 px-3 ">
+            <div className="flex flex-col md:flex-row  items-center gap-6 px-3 ">
               <div className=" w-full h-72 py-6  ">
                 <BarChart />
               </div>
@@ -143,7 +143,7 @@ const Page = () => {
         </div>
 
         {/* Individual Ad Performance */}
-        <div className=" w-full rounded-xl p-6 bg-[#040911] border border-[#FFFFFF33] ">
+        <div className=" w-full h-fit rounded-xl p-6 bg-[#040911] border border-[#FFFFFF33] ">
           <div className="  rounded-lg shadow mb-8">
             <h2 className="text-lg  mb-4">Individual ad performance</h2>
             <Image

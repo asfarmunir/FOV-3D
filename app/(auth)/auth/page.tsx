@@ -9,7 +9,7 @@ import React from "react";
 const Page = () => {
   return (
     <section>
-      <div className="flex flex-col items-center max-w-[720px] mx-auto gap-4 pt-2 2xl:pt-20 justify-center">
+      <div className="flex flex-col items-center max-w-[720px] mx-auto gap-4 px-4 pt-2 2xl:pt-20 justify-center">
         <h1 className="text-2xl font-semibold text-white">Who are you?</h1>
 
         <div className="flex items-center w-full justify-between flex-col py-5 sm:flex-row gap-4">

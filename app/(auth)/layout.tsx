@@ -14,7 +14,7 @@ const layout = ({
         layout="fill"
         objectFit="contain"
         objectPosition="right"
-        className="z-0"
+        className="z-0 hidden md:block"
       />
       <div className="flex justify-center py-12">
         <Image src="/logo.svg" alt="404" width={90} height={90} />

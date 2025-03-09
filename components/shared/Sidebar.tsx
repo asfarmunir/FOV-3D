@@ -79,7 +79,7 @@ const Sidebar = () => {
             type="checkbox"
             id="drawer-toggle"
             className="relative sr-only peer"
-            defaultChecked
+            // defaultChecked
           />
           <label
             htmlFor="drawer-toggle"
