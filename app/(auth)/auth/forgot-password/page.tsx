@@ -5,9 +5,11 @@ import { LucideArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const [isSent, setIsSent] = React.useState(false);
+  const router = useRouter();
   return (
     <section>
       {isSent ? (
@@ -22,6 +24,7 @@ const Page = () => {
 
           <Button
             type="button"
+            onClick={() => router.push("/auth/new-password")}
             className=" w-full mt-4 py-3  rounded-[10px] bg-primary-50"
           >
             Open email app

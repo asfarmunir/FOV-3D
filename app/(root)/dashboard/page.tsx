@@ -7,16 +7,16 @@ import React from "react";
 const Page = () => {
   const [tab, setTab] = React.useState("30 days");
   return (
-    <div className=" w-full p-8 z-50">
+    <div className=" w-full p-8 z-20">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
-        <div className="text-start ">
+      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8">
+        <div className="text-center sm:text-start mb-4 md:mb-0">
           <h1 className="text-2xl font-bold">Dashboard</h1>
           <p className="text-primary-500 font-light">
             Measure your advertising conversions
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex z-20 items-center gap-2">
           <button className="bg-black border border-[#FFFFFF33] hover:bg-gray-900 text-xs 2xl:text-sm inline-flex items-center gap-2 text-white px-5 py-3 rounded-[12px]">
             <Image src="/export.svg" alt="filter" width={20} height={20} />
             Export
@@ -26,8 +26,8 @@ const Page = () => {
           </button>
         </div>
       </div>
-      <div className="flex justify-between items-center mb-8">
-        <div className="flex z-50 items-center  border border-[#FFFFFF33] rounded-[8px] ">
+      <div className="flex justify-between flex-col-reverse sm:flex-row gap-4 items-center mb-8">
+        <div className="flex z-20 items-center  border border-[#FFFFFF33] rounded-[8px] ">
           <button
             onClick={() => setTab("30 days")}
             className={`
@@ -77,7 +77,7 @@ const Page = () => {
 
       {/* Campaign Monthly Impressions */}
 
-      <div className="flex gap-8 flex-col sm:flex-row">
+      <div className="flex gap-8 flex-col md:flex-row">
         <div className=" w-full">
           <div className="rounded-xl bg-[#040911] border border-[#FFFFFF33]  shadow mb-8">
             <div className="flex justify-between  p-6 border-b border-[#FFFFFF33]  text-white">
@@ -94,7 +94,7 @@ const Page = () => {
           <div className="rounded-xl bg-[#040911] border border-[#FFFFFF33]  shadow mb-8">
             <div className="flex justify-between items-center p-6 border-b border-[#FFFFFF33]  text-white">
               <h2 className="2xl:text-lg  ">Campaign Details:</h2>
-              <div className="flex z-50 items-center  border border-[#FFFFFF33] rounded-[8px] ">
+              <div className="flex z-20 items-center  border border-[#FFFFFF33] rounded-[8px] ">
                 <button
                   onClick={() => setTab("30 days")}
                   className={`
@@ -131,7 +131,7 @@ const Page = () => {
                 </button>
               </div>{" "}
             </div>
-            <div className="flex items-center gap-6 px-3 ">
+            <div className="flex flex-col  items-center gap-6 px-3 ">
               <div className=" w-full h-72 py-6  ">
                 <BarChart />
               </div>

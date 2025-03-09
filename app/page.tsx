@@ -28,7 +28,7 @@ export default function Home() {
       <Navbar />
       <main className="">
         <section className="wrapper">
-          <div className="h-[80svh]  flex items-center gap-12 md:gap-16 justify-between">
+          <div className="xl:h-[80svh] py-12 xl:py-0  flex flex-col md:flex-row items-center gap-6  md:gap-16 justify-between">
             <div className=" w-full space-y-6 2xl:space-y-8">
               <h1 className="text-5xl 2xl:text-7xl font-bold text-white">
                 Advertise in the Metaverse{" "}
@@ -66,7 +66,10 @@ export default function Home() {
           </p>
           <div className="grid pt-6 xl:pt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 2xl:gap-8">
             {steps.map((step, index) => (
-              <div className=" p-6 md:p-8 bg-[#2C2C2C]/10 md:py-8 space-y-3 border border-stone-800 rounded-xl">
+              <div
+                key={index}
+                className=" p-6 md:p-8 bg-[#2C2C2C]/10 md:py-8 space-y-3 border border-stone-800 rounded-xl"
+              >
                 <h1 className="text-primary font-bold text-3xl md:text-5xl 2xl:text-5xl pb-2">
                   0{index + 1}
                 </h1>
@@ -103,10 +106,10 @@ export default function Home() {
           </div>
         </section>
         <section className=" wrapper flex flex-col items-center gap-4 py-12 md:py-20 xl:py-28">
-          <h1 className="text-3xl 2xl:text-5xl font-bold text-white">
-            Powered by FOV-tracking SDK
+          <h1 className="text-3xl 2xl:text-5xl text-center font-bold text-white">
+            Powered by <br className="sm:hidden" /> FOV-tracking SDK
           </h1>
-          <p className="text-gray-400 2xl:text-lg">
+          <p className="text-gray-400 2xl:text-lg text-center">
             Advanced technology for precise ad performance measurement
           </p>
           <div className="grid pt-6 xl:pt-10 grid-cols-1 sm:grid-cols-2 justify-items-center  ms:px-8 md:px-12 xl:px-20 2xl:px-24 gap-3 sm:gap-4 md:gap-6 2xl:gap-8">

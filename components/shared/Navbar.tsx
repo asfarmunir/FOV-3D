@@ -76,14 +76,23 @@ export default function Home() {
                 {link.name}
               </Link>
             ))}
+            <Link
+              href={"/auth"}
+              className="bg-primary w-3/4 text-center px-4 2xl:px-6 font-semibold text-sm 2xl:text-base text-white py-2.5 2xl:py-3 rounded-md"
+            >
+              Log In
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
 
       {/* Login Button */}
-      <button className="bg-primary hidden md:block px-4 2xl:px-6 font-semibold text-sm 2xl:text-base text-white py-2.5 2xl:py-3 rounded-md">
+      <Link
+        href={"/auth"}
+        className="bg-primary hidden md:block px-4 2xl:px-6 font-semibold text-sm 2xl:text-base text-white py-2.5 2xl:py-3 rounded-md"
+      >
         Log In
-      </button>
+      </Link>
     </nav>
   );
 }

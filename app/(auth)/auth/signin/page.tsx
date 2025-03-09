@@ -18,10 +18,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const [tab, setTab] = React.useState("login");
-
+  const router = useRouter();
   const signupSchema = z.object({
     name: z.string().min(2, {
       message: "name must be at least 2 characters.",
@@ -75,6 +76,7 @@ const Page = () => {
   }
   function onSigninSubmit(values: z.infer<typeof loginSchema>) {
     console.log(values);
+    router.push("/dashboard");
   }
 
   return (

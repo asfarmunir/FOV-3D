@@ -8,8 +8,8 @@ import React from "react";
 
 const Page = () => {
   return (
-    <section>
-      <div className="flex flex-col items-center gap-4 pt-2 2xl:pt-6 justify-center">
+    <section className="pb-12">
+      <div className="flex flex-col items-center gap-4 pt-2 2xl:pt-4 justify-center">
         <Image src="/newPassword.svg" alt="logo" width={50} height={50} />
         <h1 className="text-2xl font-semibold text-white">Set new password</h1>
         <p className="text-[#FFFFFF80] text-center">

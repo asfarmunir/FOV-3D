@@ -5,8 +5,10 @@ import { LucideArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
   return (
     <section>
       <div className="flex flex-col items-center max-w-[400px] mx-auto gap-4 pt-2 2xl:pt-20 justify-center">
@@ -18,6 +20,7 @@ const Page = () => {
         </p>
 
         <Button
+          onClick={() => router.push("/auth/signin")}
           // type="button"
           className=" w-full mt-4 py-3 text-white text-center rounded-[10px] bg-primary-50"
         >

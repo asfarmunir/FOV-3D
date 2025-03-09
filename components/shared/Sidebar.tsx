@@ -57,23 +57,24 @@ const Sidebar = () => {
               </Link>
             ))}
           </div>
-
-          <div className=" border border-[#FFFFFF33] p-3 rounded-xl absolute bottom-10 w-[80%] flex items-center gap-2">
-            <Image
-              src="/avatar.svg"
-              alt="404"
-              width={35}
-              height={35}
-              className="rounded-full"
-            />
-            <div>
-              <p className="text-sm text-white">John Doe</p>
-              <p className="text-xs text-primary-500">Admin</p>
+          <Link href={"/settings"}>
+            <div className=" border border-[#FFFFFF33] p-3 rounded-xl absolute bottom-10 w-[80%] flex items-center gap-2">
+              <Image
+                src="/avatar.svg"
+                alt="404"
+                width={35}
+                height={35}
+                className="rounded-full"
+              />
+              <div>
+                <p className="text-sm text-white">John Doe</p>
+                <p className="text-xs text-primary-500">Admin</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         {/* Movbile Sidebar */}
-        <div className="flex lg:hidden ">
+        <div className="flex z-50 lg:hidden ">
           <input
             type="checkbox"
             id="drawer-toggle"
@@ -82,35 +83,48 @@ const Sidebar = () => {
           />
           <label
             htmlFor="drawer-toggle"
-            className="absolute mt-[10%] opacity-80 left-2 inline-block p-4 transition-all duration-500 bg-primary rounded-lg peer-checked:rotate-180 peer-checked:left-64"
+            className="absolute mt-[10%] opacity-80 left-2 inline-block p-4 transition-all duration-500 bg-primary-50 rounded-lg peer-checked:rotate-180 peer-checked:left-64"
           >
             <div className="w-5 h-1 mb-2 rotate-45 bg-white rounded-lg" />
             <div className="w-5 h-1 -rotate-45 bg-white rounded-lg" />
           </label>
-          <div className=" fixed top-0  transition-all duration-500 transform -translate-x-full rounded-tr-3xl rounded-br-3xl  shadow-lg peer-checked:translate-x-0 bg-primary min-h-screen  text-slate-300 w-64 z-30  left-0 h-screen overflow-y-scroll pb-8">
+          <div className=" fixed top-0  transition-all duration-500 transform -translate-x-full rounded-tr-3xl rounded-br-3xl  shadow-lg peer-checked:translate-x-0 bg-black min-h-screen  text-slate-300 w-64 z-30  left-0 h-screen overflow-y-scroll pb-8">
             <div id="logo" className="my-16 px-8">
               <h1 className="text-lg md:text-2xl font-bold pb-2 text-white mb-2">
                 News App
               </h1>
             </div>
             {/* <Navlinks links={links} /> */}
+            <div className="flex flex-col gap-4 px-8">
+              {links.map((link, index) => (
+                <Link key={index} href={link.href}>
+                  <p className="flex items-center gap-3 text-xs 2xl:text-base mt-2 w-full  text-slate-200  ">
+                    <Image src={link.image} alt="404" width={20} height={20} />
+                    {link.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
+
             <Link
+              href={"/settings"}
               className={
-                "flex items-center gap-4 px-12 mt-2 w-full p-4 text-slate-200  "
-              }
-              href={"/help"}
-            >
-              <MdHelp className="w-6 h-6 mr-3" />
-              Help
-            </Link>
-            <Link
-              href={"/"}
-              className={
-                "flex absolute bottom-3 font-semibold  items-center gap-4 px-12 mt-2 w-full p-4 text-brown/100  "
+                "flex absolute bottom-3 font-semibold  items-center gap-4  w-full p-4 text-brown/100  "
               }
             >
-              <FaArrowLeftLong className="w-3 h-3 mr-1" />
-              Log Out
+              <div className=" border border-[#FFFFFF33] p-3 rounded-xl absolute bottom-10 w-[80%] flex items-center gap-2">
+                <Image
+                  src="/avatar.svg"
+                  alt="404"
+                  width={35}
+                  height={35}
+                  className="rounded-full"
+                />
+                <div>
+                  <p className="text-sm text-white">John Doe</p>
+                  <p className="text-xs text-primary-500">Admin</p>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
