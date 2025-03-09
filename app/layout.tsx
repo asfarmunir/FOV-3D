@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Evently",
-  description: "Events Management Application",
+  title: "FOV",
+  description: "FOV is a platform for in-game advertising.",
   icons: {
     icon: "/assets/images/logo.svg",
   },
