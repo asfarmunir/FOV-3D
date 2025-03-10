@@ -14,8 +14,8 @@ interface ILink {
 }
 
 const links = [
-  { name: "Dashboard", href: "#", image: "/dashboard.svg" },
-  { name: "Ad Campaign", href: "#", image: "/ad.svg" },
+  { name: "Dashboard", href: "/dashboard", image: "/dashboard.svg" },
+  { name: "Ad Campaign", href: "/ad-campaign", image: "/ad.svg" },
   { name: "Company", href: "#", image: "/company.svg" },
   // { name: "FOV Chat", href: "#", image: "/chat.svg" },
 ];

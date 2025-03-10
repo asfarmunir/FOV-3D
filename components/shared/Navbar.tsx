@@ -16,8 +16,8 @@ export default function Home() {
 
   // Navlinks array
   const navLinks = [
-    { name: "Dashboard", href: "#" },
-    { name: "Ad Campaign", href: "#" },
+    { name: "Dashboard", href: "/dashboard" },
+    { name: "Ad Campaign", href: "/ad-campaign" },
     { name: "Company", href: "#" },
     { name: "FOV Chat", href: "#" },
   ];
